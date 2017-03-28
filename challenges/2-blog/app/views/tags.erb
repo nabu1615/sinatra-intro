@@ -1,0 +1,15 @@
+<div class="tags-list">
+	<h1><%= @tag.name %></h1>
+	<% @tag.entries.each do |entry| %>
+		<div class="tags-list__item">
+			<h2><a href="../entries/<%= entry.id %>"><%= entry.title %></a></h2>
+			<figure>
+				<a href="../entries/<%= entry.id %>">
+					<img src="<%= entry.image %>" alt="">
+				</a>
+			</figure>
+			<p><%= entry.content %></p>
+			<a href="../entries/<%= entry.id %>">Ver más</a>
+		</div>
+	<% end %>
+</div>

@@ -1,0 +1,15 @@
+<h1>Crear una Nota</h1>
+<% if @errors %>
+	<ul>
+		<% @errors.each do |error| %>
+			<li><%= error %></li>
+		<% end %>
+	</ul>
+<% end %>
+<form action="/notes" method="post">
+	<label for="title">Title</label></br>
+	<input type="text" name="title" placeholder="Añade un titulo"></br>
+	<label for="content">Content</label></br>
+	<textarea name="content" placeholder="Añade el contenido" id="" cols="30" rows="10"></textarea></br>
+	<input type="submit" value="Crear">
+</form>

@@ -1,0 +1,10 @@
+<h1><%= @entry.title %></h1>
+<figure>
+	<img src="<%= @entry.image %>" alt="">
+</figure>
+<p><%= @entry.content %></p>
+<ul>
+	<% @entry.tags.each do |tag| %>
+		<li><a href="../tags/<%= tag.id %>"><%= tag.name %></a></li>
+	<% end %>
+</ul>
